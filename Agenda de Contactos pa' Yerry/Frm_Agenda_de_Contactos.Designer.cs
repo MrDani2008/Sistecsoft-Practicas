@@ -29,7 +29,7 @@ namespace Agenda_de_Contactos_pa__Yerry
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_numero = new System.Windows.Forms.TextBox();
             this.nombre = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@ namespace Agenda_de_Contactos_pa__Yerry
             this.txt_id = new System.Windows.Forms.TextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_buscar_id = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_principal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +106,6 @@ namespace Agenda_de_Contactos_pa__Yerry
             this.btn_guardar.TabIndex = 7;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Visible = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // btn_Cancelar
@@ -118,20 +117,19 @@ namespace Agenda_de_Contactos_pa__Yerry
             this.btn_Cancelar.TabIndex = 8;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
-            this.btn_Cancelar.Visible = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Click);
             // 
             // dgv_principal
             // 
             this.dgv_principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_principal.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_principal.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_principal.GridColor = System.Drawing.Color.Black;
             this.dgv_principal.Location = new System.Drawing.Point(415, 58);
             this.dgv_principal.Name = "dgv_principal";
@@ -147,7 +145,6 @@ namespace Agenda_de_Contactos_pa__Yerry
             this.btn_modificar.TabIndex = 11;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Visible = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_Modificar);
             // 
             // btn_nuevecito
@@ -193,23 +190,22 @@ namespace Agenda_de_Contactos_pa__Yerry
             // 
             // txt_Buscar
             // 
-            this.txt_Buscar.Enabled = false;
             this.txt_Buscar.Location = new System.Drawing.Point(415, 28);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(324, 20);
             this.txt_Buscar.TabIndex = 18;
             this.txt_Buscar.WordWrap = false;
             // 
-            // button1
+            // btn_buscar_id
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(337, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 20);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "🔍";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btn_buscar_id);
+            this.btn_buscar_id.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_buscar_id.Location = new System.Drawing.Point(337, 77);
+            this.btn_buscar_id.Name = "btn_buscar_id";
+            this.btn_buscar_id.Size = new System.Drawing.Size(33, 20);
+            this.btn_buscar_id.TabIndex = 19;
+            this.btn_buscar_id.Text = "🔍";
+            this.btn_buscar_id.UseVisualStyleBackColor = true;
+            this.btn_buscar_id.Click += new System.EventHandler(this.btn_buscar_id_Click);
             // 
             // Agenda_de_Contactos
             // 
@@ -217,7 +213,7 @@ namespace Agenda_de_Contactos_pa__Yerry
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_buscar_id);
             this.Controls.Add(this.txt_Buscar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.txt_id);
@@ -258,7 +254,7 @@ namespace Agenda_de_Contactos_pa__Yerry
         private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox txt_Buscar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_buscar_id;
     }
 }
 

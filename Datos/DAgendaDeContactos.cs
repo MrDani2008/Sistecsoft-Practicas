@@ -63,7 +63,7 @@ namespace Datos
             return dt;
         }
 
-        public void EjecutarBusqueda(string query)
+        public DataTable EjecutarBusqueda(string query)
         {
             // Crear la conexión a la base de datos
             using (MySqlConnection conexion = GetCon())
@@ -82,7 +82,7 @@ namespace Datos
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-
+                return dt;
 
 
             }

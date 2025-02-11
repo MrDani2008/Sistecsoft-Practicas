@@ -17,11 +17,12 @@ namespace Agenda_de_Contactos_pa__Yerry
         private void Agenda_de_Contactos_Load(object sender, EventArgs e)
         {
             dgv_principal.RowHeadersVisible = false;
-            LlenarGrid();
-            txt_id.Enabled = true;
-            btn_nuevecito.Visible = true;
-
+            
+            Hablilitar_campos(true,false,false);
+            Habilitar_botones(false, false, false, true,true);
             txt_nombre.Focus();
+            
+            LlenarGrid();
         }
 
         public void LlenarGrid()
@@ -55,14 +56,9 @@ namespace Agenda_de_Contactos_pa__Yerry
             {
                 new DAgendaDeContactos().UAgendaDeContactos(eAgendaDeContactos);
             }
-
-            btn_guardar.Visible = false;
-            btn_nuevecito.Visible = true;
-            btn_modificar.Visible = true;
-
-            txt_id.Enabled = false;
-            txt_nombre.Enabled = false;
-            txt_numero.Enabled = false;
+            Habilitar_botones(false, false, false, true,true);
+            Hablilitar_campos(true, false, false);
+            Limpiar();
 
             MessageBox.Show("Guardado con exito");
             LlenarGrid();
@@ -80,67 +76,43 @@ namespace Agenda_de_Contactos_pa__Yerry
                 txt_nombre.Text = nombre;
                 txt_numero.Text = numero;
             }
-            txt_id.Enabled = false;
-            txt_nombre.Enabled = false;
-            txt_numero.Enabled = false;
-
-            btn_modificar.Visible = true;
-            btn_Cancelar.Visible = true;
-            btn_nuevecito.Visible = true;
-            btn_guardar.Visible = false;
+            Hablilitar_campos(false, false, false);
+            Habilitar_botones(false, true, true, true,true);
         }
 
         private void btn_nuevecito_Click(object sender, EventArgs e)
         {
-            txt_id.Enabled = false;
-            txt_nombre.Enabled = true;
-            txt_numero.Enabled = true;
-
-            btn_guardar.Visible = true;
-            btn_Cancelar.Visible = true;
-            btn_nuevecito.Visible = false;
-
-
+            Limpiar();
+            Hablilitar_campos(false, true, true);
+            Habilitar_botones(true, true, false, false,false);
             txt_nombre.Focus();
         }
 
-        private void btn_Click(object sender, EventArgs e)
+        public void btn_Click(object sender, EventArgs e)
         {
-            txt_id.Clear();
-            txt_nombre.Clear();
-            txt_numero.Clear();
+            Limpiar();
+            Hablilitar_campos(true,false,false);
+            Habilitar_botones(false, false, false, true,true);
 
-            txt_id.Enabled = true;
-            txt_nombre.Enabled = false;
-            txt_numero.Enabled = false;
-
-            btn_nuevecito.Visible = true;
-            btn_guardar.Visible = false;
-            btn_Cancelar.Visible = false;
-            btn_modificar.Visible = false;
         }
 
         private void btn_Modificar(object sender, EventArgs e)
         {
-            btn_guardar.Visible = true;
-            btn_nuevecito.Visible = true;
-            btn_modificar.Visible = false;
-
-            txt_nombre.Enabled = true;
-            txt_numero.Enabled = true;
-            txt_id.Enabled = false; 
+            Habilitar_botones(true, true, false, false,true);
+            Hablilitar_campos(false, true, true);
+            
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            /*txt_Buscar.Enabled = true;
+            txt_Buscar.Enabled = true;
             string query = txt_Buscar.Text;
             DAgendaDeContactos dAgenda = new DAgendaDeContactos();
-                DataTable dt = dAgenda.EjecutarBusqueda(query);
+            DataTable dt = dAgenda.EjecutarBusqueda(query);
 
-                // Asignar los resultados al DataGridView
-                dgv_principal.DataSource = dt;*/
 
+            dgv_principal.DataSource = dt;
+            
         }
 
         private void txt_id_TextChanged(object sender, EventArgs e)
@@ -175,7 +147,7 @@ namespace Agenda_de_Contactos_pa__Yerry
                 {
                     txt_nombre.Text = dtAgenda.Rows[0]["nombre"].ToString();
                     txt_numero.Text = dtAgenda.Rows[0]["numero"].ToString();
-                    btn_modificar.Visible = true;
+                    Habilitar_botones(false, false, true, false, false);
 
 
                 }
@@ -186,27 +158,45 @@ namespace Agenda_de_Contactos_pa__Yerry
             }
 
         }
-
-        private void btn_buscar_id(object sender, EventArgs e)
+        private void btn_buscar_id_Click(object sender, EventArgs e)
         {
             int idAgenda = IntParse(txt_id.Text);
             DataTable dtAgenda = new DAgendaDeContactos().SAgendaDeContactos(idAgenda);
 
 
-                if (dtAgenda.Rows.Count > 0) // Verificar si hay resultados
-                {
-                    txt_nombre.Text = dtAgenda.Rows[0]["nombre"].ToString();
-                    txt_numero.Text = dtAgenda.Rows[0]["numero"].ToString();
-                    btn_modificar.Visible = true;
+            if (dtAgenda.Rows.Count > 0) // Verificar si hay resultados
+            {
+                txt_nombre.Text = dtAgenda.Rows[0]["nombre"].ToString();
+                txt_numero.Text = dtAgenda.Rows[0]["numero"].ToString();
+                Habilitar_botones(false, false, true, false, false);
+            }
+            else
+            {
+                MessageBox.Show("Contacto no encontrado");
 
-
-                }
-                else
-                {
-                    MessageBox.Show("Contacto no encontrado");
-                    
-                }
-
+            }
         }
+        private void Habilitar_botones(bool guardar, bool cancelar, bool modificar, bool nuevo, bool id)
+        {
+            btn_guardar.Enabled = guardar;
+            btn_Cancelar.Enabled = cancelar;
+            btn_modificar.Enabled = modificar;
+            btn_nuevecito.Enabled = nuevo;
+            btn_buscar_id.Enabled = id;
+        }
+        private void Hablilitar_campos(bool id,bool nombre, bool numero)
+        {
+            txt_id.Enabled = id;
+            txt_nombre.Enabled = nombre;
+            txt_numero.Enabled = numero;
+        }
+        private void Limpiar()
+        {
+            txt_id.Clear();
+            txt_nombre.Clear();
+            txt_numero.Clear();
+        }
+        
     }
 }
+
