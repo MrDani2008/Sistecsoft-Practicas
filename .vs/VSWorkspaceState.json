@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Agenda de Contactos pa' Yerry",
+    "\\Datos"
   ],
-  "SelectedNode": "\\Agenda de Contactos pa' Yerry.sln",
+  "SelectedNode": "\\Agenda de Contactos pa' Yerry\\Frm_Agenda_de_Contactos.cs",
   "PreviewInSolutionExplorer": false
 }
