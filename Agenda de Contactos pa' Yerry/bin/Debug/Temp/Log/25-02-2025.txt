@@ -1,0 +1,94 @@
+----- Error registrado -----
+Fecha y hora: 25/2/2025 2:44:08 p. m.
+Mensaje de error: Data too long for column 'prm_nombre' at row 1
+---------------------------------------------------
+----- Error registrado -----
+Fecha y hora: 25/2/2025 2:46:41 p. m.
+Mensaje de error: Data too long for column 'prm_nombre' at row 1
+---------------------------------------------------
+Stack Trace:    en MySql.Data.MySqlClient.MySqlStream.<ReadPacketAsync>d__30.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.NativeDriver.<GetResultAsync>d__45.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.Driver.<GetResultAsync>d__85.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.Driver.<NextResultAsync>d__84.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.MySqlDataReader.<NextResultAsync>d__97.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en MySql.Data.MySqlClient.MySqlDataReader.<NextResultAsync>d__97.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__111.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__111.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__111.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteNonQueryAsync>d__100.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en Datos.DAgendaDeContactos.UAgendaDeContactos(EAgendaDeContactos eAgendaDeContactos) en C:\Users\Usuario\Documents\Sistecsoft-Practicas\Agenda de Contactos pa' Yerry\Datos\DAgendaDeContactos.cs:línea 48
+   en Agenda_de_Contactos_pa__Yerry.Agenda_de_Contactos.btn_guardar_Click(Object sender, EventArgs e) en C:\Users\Usuario\Documents\Sistecsoft-Practicas\Agenda de Contactos pa' Yerry\Agenda de Contactos pa' Yerry\Frm_Agenda_de_Contactos.cs:línea 69
+----- Error registrado -----
+Fecha y hora: 25/2/2025 2:52:49 p. m.
+Mensaje de error: Data too long for column 'prm_nombre' at row 1
+---------------------------------------------------
+Stack Trace:    en MySql.Data.MySqlClient.MySqlStream.<ReadPacketAsync>d__30.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.NativeDriver.<GetResultAsync>d__45.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.Driver.<GetResultAsync>d__85.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.Driver.<NextResultAsync>d__84.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.MySqlDataReader.<NextResultAsync>d__97.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en MySql.Data.MySqlClient.MySqlDataReader.<NextResultAsync>d__97.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__111.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__111.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__111.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.MySqlCommand.<ExecuteNonQueryAsync>d__100.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   en Datos.DAgendaDeContactos.UAgendaDeContactos(EAgendaDeContactos eAgendaDeContactos) en C:\Users\Usuario\Documents\Sistecsoft-Practicas\Agenda de Contactos pa' Yerry\Datos\DAgendaDeContactos.cs:línea 48
+   en Agenda_de_Contactos_pa__Yerry.Agenda_de_Contactos.btn_guardar_Click(Object sender, EventArgs e) en C:\Users\Usuario\Documents\Sistecsoft-Practicas\Agenda de Contactos pa' Yerry\Agenda de Contactos pa' Yerry\Frm_Agenda_de_Contactos.cs:línea 69
